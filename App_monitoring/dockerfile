@@ -1,0 +1,10 @@
+# Telegraf agent configured for Wavefront output intended to be used in a sidecar config
+
+FROM wavefronthq/telegraf-sidecar
+
+ENV WAVEFRONT_PROXY="http://proxyserver:2878"
+ENV INTERVAL="60s"
+
+COPY telegraf.conf /etc/telegraf/telegraf.conf
+
+CMD ["telegraf", "--config", "/etc/telegraf/telegraf.conf", "--config-directory", "/etc/telegraf/telegraf.d"]
