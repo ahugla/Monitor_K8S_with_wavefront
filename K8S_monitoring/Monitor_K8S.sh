@@ -44,8 +44,15 @@ curl -O https://raw.githubusercontent.com/wavefrontHQ/wavefront-kubernetes-colle
 
 sed -i -e 's/clusterName=k8s-cluster/clusterName='"$VAR_CLUSTER_NAME"'/g' 4-collector-daemonset.yaml 
 
-#If RBAC is disabled in your Kubernetes cluster, comment out serviceAccountName: wavefront-collector
-sed -i -e '/serviceAccountName: wavefront-collector/s/^/#/g' 4-collector-daemonset.yaml
+#If RBAC is disabled in your Kubernetes cluster, comment the line  "serviceAccountName: wavefront-collector"
+#sed -i -e '/serviceAccountName: wavefront-collector/s/^/#/g' 4-collector-daemonset.yaml
 
 #kubectl create -f /root/DeployProxy/wavefront-collector-dir
+
+
+#usage dans wavefront
+#--------------------
+#count(last(1s,ts("kubernetes.pod.memory.usage", source=vra-vm-0878 or source=vra-vm-0879, label.app=alexphp)))
+
+
 
