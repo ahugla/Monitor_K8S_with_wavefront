@@ -1,7 +1,10 @@
+#source
+#https://docs.wavefront.com/kubernetes.html?utm_source=Website&utm_medium=referral&utm_campaign=integrations-page#troubleshooting
 
-VAR_WAVEFRONT_SERVER="ALEX_CLUSTER.wavefront.com"
-VAR_WAVEFRONT_TOKEN="alextoken"
-VAR_CLUSTER_NAME="alex-k8s-cluster"
+
+VAR_WAVEFRONT_SERVER="my.wavefront.com"
+VAR_WAVEFRONT_TOKEN="123456789"
+VAR_CLUSTER_NAME="kubernetes"
 
 
 mkdir /root/DeployProxy
