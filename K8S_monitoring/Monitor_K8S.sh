@@ -1,6 +1,6 @@
 
 VAR_WAVEFRONT_SERVER="ALEX_CLUSTER.wavefront.com"
-VAR-WAVEFRONT_TOKEN="alextoken"
+VAR_WAVEFRONT_TOKEN="alextoken"
 
 
 
