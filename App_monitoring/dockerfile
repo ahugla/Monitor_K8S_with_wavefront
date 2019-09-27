@@ -2,8 +2,8 @@
 
 FROM wavefronthq/telegraf-sidecar
 
-ENV WAVEFRONT_PROXY="http://proxyserver:2878"
-ENV INTERVAL="60s"
+ENV WAVEFRONT_PROXY="http://172.18.4.51:2878"
+ENV INTERVAL="10s"
 
 COPY telegraf.conf /etc/telegraf/telegraf.conf
 
